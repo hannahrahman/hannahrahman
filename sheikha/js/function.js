@@ -21,6 +21,14 @@
 		}
 	});
 	
+
+	// about me
+	document.querySelector('.btn-download').addEventListener('click', function(e) {
+		e.preventDefault(); // Prevent default anchor behavior
+		const targetSection = document.getElementById('about'); // Change 'section-id' to the ID of the target section
+		targetSection.scrollIntoView({ behavior: 'smooth' });
+	});
+	
 	/* Top Menu */
 	$(document).on('click','.navbar-nav li a, #responsive-menu ul li a',function(){
 		if($(this).hasClass("has-popup")) return false;
