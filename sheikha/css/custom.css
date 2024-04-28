@@ -164,9 +164,6 @@ a:focus {
 /*****    Navigation area css   *****/
 /************************************/
 
-/* header.header{
-	
-} */
 
 header .navbar {
 	padding: 0;
@@ -177,6 +174,7 @@ header .navbar {
 
 .navbar-brand h1 {
 	font-family: 'Berkshire Swash', cursive;
+	font-size: 38px;
 	font-weight: normal;
 	transition: all 0.3s;
 	color: #fff;
@@ -296,7 +294,17 @@ header .navbar.sticky-header {
 	top: 0px;
 	left: 0;
 	width: 100%;
-	background: url(../images/header-bg.jpg) no-repeat top center;
+	background: url(../images/header-bg.png) no-repeat top center;
+	background-size: cover;
+	padding: 220px 0 120px;
+}
+
+.banner2 {
+	position: relative;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	background: url(../images/header-bg-2.png) no-repeat top center;
 	background-size: cover;
 	padding: 220px 0 120px;
 }
@@ -308,6 +316,13 @@ header .navbar.sticky-header {
 		width: 100%;
 		background: none;
 		background-color: 222;
+	}
+
+	.banner2 {
+		position: relative;
+		top: 0px;
+		width: 100%;
+		background: url(../images/header-bg-2.png) no-repeat top center;;
 	}
 }
 
@@ -834,378 +849,7 @@ header .navbar.sticky-header {
 	border-color: #E30B5D;
 	color: #E30B5D;
 }
-
-/***************************************/
-/*****     Our Team Section css     ****/
-/***************************************/
-
-.our-team {
-	padding: 100px 0;
-}
-
-.team-single {
-	position: relative;
-	margin-bottom: 35px;
-}
-
-.team-single figure img {
-	filter: grayscale(100%);
-}
-
-.team-info {
-	position: absolute;
-	background: #222;
-	border: 1px solid #333;
-	left: 30px;
-	right: 30px;
-	bottom: -35px;
-	padding: 14px 20px;
-	text-align: center;
-}
-
-.team-info:before {
-	content: '';
-	display: block;
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;
-	border-top: 1px solid #E30B5D;
-	border-bottom: 1px solid #E30B5D;
-	transform: scale(0, 1);
-	transition: all 0.6s;
-}
-
-.team-info:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;
-	border-left: 1px solid #E30B5D;
-	border-right: 1px solid #E30B5D;
-	transform: scale(1, 0);
-	transition: all 0.6s;
-}
-
-.team-info h3 {
-	color: #fff;
-	font-size: 18px;
-	font-weight: 400;
-	margin-bottom: 2px;
-}
-
-.team-info p {
-	font-size: 14px;
-	margin: 0;
-}
-
-.team-single:hover .team-info:before,
-.team-single:hover .team-info:after {
-	transform: scale(1);
-}
-
-/***************************************/
-/*****      Pricing Section css     ****/
-/***************************************/
-
-.pricing {
-	padding: 100px 0;
-	background: #151515;
-}
-
-.pricing-single {
-	text-align: center;
-	background: #222;
-	border: 1px solid #333;
-	position: relative;
-}
-
-.pricing-single:before {
-	content: '';
-	display: block;
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;
-	border-top: 1px solid #E30B5D;
-	border-bottom: 1px solid #E30B5D;
-	transform: scale(0, 1);
-	transition: all 0.6s;
-}
-
-.pricing-single:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;
-	border-left: 1px solid #E30B5D;
-	border-right: 1px solid #E30B5D;
-	transform: scale(1, 0);
-	transition: all 0.6s;
-}
-
-.pricing-header {
-	padding: 30px 20px 10px;
-	border-bottom: 1px solid #333;
-	position: relative;
-	overflow: hidden;
-}
-
-.pricing-header .icon-box {
-	font-size: 40px;
-	color: #E30B5D;
-	line-height: 1em;
-	margin-bottom: 10px;
-}
-
-.pricing-header h3 {
-	color: #fff;
-	font-size: 22px;
-	font-weight: 400;
-	margin: 0;
-}
-
-.pricing-header p {
-	margin: 0;
-	font-size: 40px;
-	font-weight: 700;
-	color: #fff;
-}
-
-.pricing-header p span {
-	font-size: 18px;
-	font-weight: 300;
-	color: #707070;
-}
-
-.pricing-body {
-	padding: 30px;
-}
-
-.pricing-body ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.pricing-body ul li {
-	padding: 10px 0;
-	border-bottom: 1px solid #282828;
-}
-
-.pricing-body ul li:last-child {
-	border: none;
-}
-
-.pricing-footer {
-	margin-bottom: 30px;
-	position: relative;
-	z-index: 1;
-}
-
-.btn-buynow {
-	display: inline-block;
-	border: 1px solid #E30B5D;
-	color: #E30B5D;
-	padding: 10px 30px;
-	transition: all 0.4s;
-}
-
-.btn-buynow:hover {
-	background: #E30B5D;
-	color: #fff;
-}
-
-.pricing-single:hover:before,
-.pricing-single:hover:after {
-	transform: scale(1);
-}
-
-.recommanded {
-	position: absolute;
-	left: -30px;
-	top: 16px;
-	background: #E30B5D;
-	width: 130px;
-	color: #fff;
-	padding: 6px;
-	font-size: 14px;
-	transform: rotate(-45deg);
-}
-
-/*******************************************/
-/*****      Testimonial Section css     ****/
-/*******************************************/
-
-.testimonials {
-	padding: 100px 0;
-}
-
-.testimonial-single {
-	text-align: center;
-}
-
-.testimonial-header {
-	margin-bottom: 30px;
-	position: relative;
-	padding-bottom: 30px;
-}
-
-.testimonial-header:after {
-	content: '';
-	display: block;
-	width: 60px;
-	margin-left: -30px;
-	height: 3px;
-	background: #333;
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-}
-
-.testimonial-header figure {
-	display: inline-block;
-	margin-bottom: 20px;
-	position: relative;
-}
-
-.testimonial-header figure:before {
-	content: '\f10d';
-	font-family: FontAwesome;
-	display: block;
-	width: 32px;
-	height: 32px;
-	background: #E30B5D;
-	color: #fff;
-	line-height: 32px;
-	font-size: 14px;
-	border-radius: 50%;
-	position: absolute;
-	right: 0;
-	top: 10px;
-}
-
-.testimonial-header figure img {
-	max-width: 120px;
-	border-radius: 50%;
-	border: 6px solid #222;
-}
-
-.testimonial-header h3 {
-	font-family: 'Berkshire Swash', cursive;
-	font-size: 24px;
-	color: #fff;
-	font-weight: normal;
-	margin-bottom: 10px;
-}
-
-.testimonial-header h4 {
-	font-size: 18px;
-	font-weight: 400;
-	color: #E30B5D;
-}
-
-.testimonial-single p {
-	font-size: 20px;
-	line-height: 1.6em;
-}
-
-.testimonial-pagination {
-	text-align: center;
-	margin-top: 20px;
-}
-
-.testimonial-pagination .swiper-pagination-bullet {
-	opacity: 1;
-	background: #333;
-	width: 20px;
-	height: 6px;
-	border-radius: 0;
-	transition: all 0.4s;
-}
-
-.testimonial-pagination .swiper-pagination-bullet-active {
-	background: #E30B5D;
-}
-
-/*******************************************/
-/*****      Newsletter Section css      ****/
-/*******************************************/
-
-.newsletter {
-	background: #151515;
-	padding: 80px 0;
-}
-
-.newsletter-content {
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-.newsletter-content h3 {
-	font-family: 'Berkshire Swash', cursive;
-	font-weight: normal;
-	color: #E30B5D;
-}
-
-.newsletter-content p {
-	font-size: 18px;
-}
-
-.newsletter-form {
-	text-align: center;
-}
-
-.newsletter-form .form-inline {
-	max-width: 568px;
-	background: #222;
-	padding: 10px;
-	margin: 0 auto;
-	border-radius: 50px;
-	border: 1px solid #333;
-}
-
-.newsletter-form .form-group {
-	width: 100%;
-}
-
-.newsletter-form .form-control {
-	width: 80%;
-	background: none;
-	border: none;
-	font-family: inherit;
-	font-size: 20px;
-	height: 60px;
-	padding: 0 30px;
-	box-shadow: none;
-	outline: 0;
-	color: #707070;
-}
-
-.newsletter-form .btn-subscribe {
-	width: 20%;
-	background: none;
-	border: none;
-	color: #E30B5D;
-	font-size: 40px;
-	text-align: right;
-	padding: 0 30px;
-	cursor: pointer;
-}
-
-.newsletter-form .btn-subscribe:hover,
-.newsletter-form .btn-subscribe:focus {
-	box-shadow: none;
-	outline: 0;
-}
+  
 
 /*******************************************/
 /*****      Latest Blog Section css     ****/
@@ -1308,28 +952,6 @@ header .navbar.sticky-header {
 .blog-footer ul li i {
 	color: #E30B5D;
 	margin-right: 6px;
-}
-
-/************************************/
-/*****      Brand Slider css     ****/
-/************************************/
-
-.brand-sponser {
-	padding: 60px 0;
-	background: #151515;
-}
-
-.brand-slide {
-	text-align: center;
-}
-
-.brand-slide img {
-	opacity: 0.4;
-	transition: all 0.4s;
-}
-
-.brand-slide:hover img {
-	opacity: 1;
 }
 
 /************************************/

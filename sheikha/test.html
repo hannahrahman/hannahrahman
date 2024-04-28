@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture Slider</title>
+<style>
+  /* Styles for the slider container */
+  .slider-container {
+    width: 80%; /* Adjust width as needed */
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    position: relative; /* Required for absolute positioning of next and previous buttons */
+  }
+
+  /* Styles for the slider */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  /* Styles for the images */
+  .slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+  }
+
+  /* Styles for previous and next buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <!-- Images -->
+    <img src="images/author-1.jpg" alt="Image 1">
+    <img src="images/author-1.jpg" alt="Image 2">
+    <img src="images/author-1.jpg" alt="Image 3">
+    <img src="images/author-1.jpg" alt="Image 1">
+    <img src="images/author-1.jpg" alt="Image 2">
+    <img src="images/author-1.jpg" alt="Image 3">
+    <!-- Add more images as needed -->
+  </div>
+  <div class="prev" onclick="moveSlide(-1)">❮</div>
+  <div class="next" onclick="moveSlide(1)">❯</div>
+</div>
+
+<script>
+  let slideIndex = 0;
+
+  function moveSlide(n) {
+    const slides = document.querySelectorAll('.slider img');
+    slideIndex += n;
+    if (slideIndex > slides.length - 1) {
+      slideIndex = 0;
+    } else if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+    const offset = -slideIndex * 100;
+    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+  }
+</script>
+
+</body>
+</html>
+
